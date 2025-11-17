@@ -40,6 +40,8 @@ A static website for "Pulse At ParkView" - a mixed-use development featuring res
 - Added Python HTTP server with cache-control headers
 - Created .gitignore for Python project
 - Set up deployment configuration
+- Updated Strength & Conditioning Center to use custom image asset (images/1763319630.png)
+- Modified directory rendering logic to support both placeholder and real image paths
 
 ## Architecture
 Simple static site served via Python's built-in HTTP server. No framework or build tools needed.

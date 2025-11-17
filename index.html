@@ -1301,7 +1301,7 @@
             // AAU/Sports
             { name: "AAU Indoor Hoops Arena", category: "aau", description: "Basketball and Volleyball Facility", image: "Basketball+Court", link: "#" },
             { name: "Elite Gymnastics Academy", category: "aau", description: "Training for All Skill Levels", image: "Gymnastics", link: "#" },
-            { name: "Strength & Conditioning Center", category: "aau", description: "Professional Weight Training", image: "Weight+Room", link: "#" },
+            { name: "Strength & Conditioning Center", category: "aau", description: "Professional Weight Training", image: "images/1763319630.png", link: "#" },
             
             // Adding more items for pagination demonstration (2 pages of 9 for "all")
             { name: "New Restaurant X", category: "dine", description: "Gourmet Italian", image: "Italian+Food", link: "#" },
@@ -1373,16 +1373,21 @@
             const itemsToShow = filteredItems.slice(startIndex, endIndex);
 
             // 3. Rendering Items
-            const directoryHtml = itemsToShow.map(item => `
+            const directoryHtml = itemsToShow.map(item => {
+                const imgSrc = item.image.includes('/') || item.image.includes('.') 
+                    ? item.image 
+                    : `https://placehold.co/400x220/ddd/777?text=${item.image}`;
+                return `
                 <div class="explore-item" data-category="${item.category}">
-                    <img src="https://placehold.co/400x220/ddd/777?text=${item.image}" alt="${item.name}">
+                    <img src="${imgSrc}" alt="${item.name}">
                     <div class="explore-item-content">
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
                         <a href="${item.link}">Details ></a>
                     </div>
                 </div>
-            `).join('');
+                `;
+            }).join('');
             grid.innerHTML = directoryHtml;
 
             // 4. Rendering Pagination Controls
