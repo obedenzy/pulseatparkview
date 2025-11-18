@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse At ParkView - Live, Work, Shop, and Stay Here</title>
+    <title>Pulse at Parkview
+
+ - Live, Work, Shop, and Stay Here</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -192,7 +194,7 @@
         }
 
         .logo img {
-            height: 40px; /* Adjust logo size */
+            height: 100px; /* Adjust logo size */
         }
 
         .main-nav ul {
@@ -225,41 +227,88 @@
         }
 
         /* Hero Section */
-        .hero-section {
-            position: relative;
-            height: 75vh; /* Adjust height as needed */
-           /* baackground-image: url('https://placehold.co/1920x1080/555/fff?text=Pulse+At+ParkView+Hero+Image'); */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
+        /* Hero Section - Responsive with real <img> */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    overflow: hidden;                    /* Important: cuts off any overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
 
-        .hero-image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
-        }
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                   /* Makes the image fill perfectly */
+    object-position: center;             /* Keeps the focal point centered */
+    z-index: 0;
+    /* Behind overlay & content */
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            padding: 0 20px;
-        }
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
 
-        .hero-content h1 {
-            margin-bottom: 30px;
-            line-height: 1.2;
-            color: #fff; /* Keep white text on dark hero overlay */
-        }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #fff;
+    font-size: 3.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 70vh;
+        min-height: 550px;
+    }
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;           /* Full screen on mobile = maximum impact */
+        min-height: 520px;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+    .hero-content {
+        padding: 0 15px;
+    }
+    .hero-content .btn {
+        padding: 16px 36px;
+        font-size: 1rem;
+    }
+}
 
         /* Explore/Directory Item Styling */
         .explore-section .tabs,
@@ -751,7 +800,7 @@
         }
 
         .logo-col img {
-            height: 45px; /* Adjust footer logo size */
+            height: 100px; /* Adjust footer logo size */
             margin-bottom: 20px;
         }
 
@@ -911,7 +960,7 @@
         <div class="container header-content">
             <div class="logo">
                 <!-- Logo image integrated using a Pexels URL matching the brand aesthetic -->
-                <img src="assets/logo.jpg" alt="Pulse At ParkView Logo">
+                <img src="assets/logo.jpg" alt="Pulse at Parkview Logo">
             </div>
             <nav class="main-nav">
                 <ul>
@@ -923,49 +972,62 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header-icons">
+            <!-- <div class="header-icons">
                 <a href="#"><img src="https://placehold.co/20x20/ffffff/555?text=S" alt="Search"></a>
                 <a href="#"><img src="https://placehold.co/20x20/ffffff/555?text=U" alt="Account"></a>
-            </div>
+            </div> -->
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <img src="images/hero5.png" alt="Pulse At ParkView" class="hero-image">
+    <!-- <section class="hero-section">
+        <img src="images/IMG_3088.jpeg" alt="Pulse at Parkview" class="hero-image">
         <div class="hero-image-overlay"></div>
         <div class="container hero-content">
-            <h1>Pulse At ParkView is more than a destination. It's life, here.</h1>
-            <button class="btn btn-primary">EXPLORE PULSE AT PARKVIEW</button>
+            <h1>Pulse at Parkview is more than a destination. It's life, here.</h1>
+            <button class="btn btn-primary">EXPLORE Pulse at Parkview</button>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Hero Section - Using <img> tag (as requested) -->
+<section class="hero-section">
+    <img src="images/IMG_3088.jpeg" alt="Pulse at Parkview - Live, Work, Shop, and Stay Here" class="hero-image">
+
+    <div class="hero-image-overlay"></div>
+
+    <div class="container hero-content">
+        <h1>Pulse at Parkview is more than a destination. It's life, here.</h1>
+        <a role="button" class="btn btn-primary" href="#explore">EXPLORE Pulse at Parkview</a>
+        <!-- <button class="btn btn-primary">EXPLORE Pulse at Parkview</button> -->
+    </div>
+</section>
 
     <!-- Explore Section (Unified Directory: Dine, Shop, Stay, Play, Medical, AAU, Work) -->
     <section class="section explore-section" id="explore">
         <div class="container">
             <div class="section-header">
-                <h2>Pulse At ParkView Directory</h2>
-                <p>Discover the complete list of businesses, services, and amenities for living, working, and playing at Pulse At ParkView.</p>
+                <h2>Pulse at Parkview Directory</h2>
+                <p>Discover the complete list of businesses, services, and amenities for living, working, and playing at Pulse at Parkview.</p>
             </div>
             <!-- Directory Tabs -->
             <div class="tabs" id="explore-tabs">
                 <a href="#" class="active" data-filter="all">All</a>
                 <a href="#" data-filter="dine">Dine</a>
                 <a href="#" data-filter="shop">Shop</a>
-                <a href="#" data-filter="stay">Live</a>
+                <!-- <a href="#" data-filter="stay">Live</a> -->
                 <a href="#" data-filter="play">Play & Venues</a>
                 <a href="#" data-filter="medical">Medical Offices</a>
                 <a href="#" data-filter="aau">AAU/Sports</a>
-                <a href="#" data-filter="work">Work/Office</a>
+                <a href="#" data-filter="work">Work/Offices</a>
             </div>
             <!-- Directory Grid - Populated by JS -->
             <div class="grid-layout explore-items" id="explore-grid">
                 <!-- Dynamic content goes here -->
             </div>
             
-            <div class="view-all">
+            <!-- <div class="view-all">
                 <a href="#">VIEW ALL DIRECTORY LISTINGS ></a>
-            </div>
+            </div> -->
             <!-- Pagination -->
             <div class="pagination">
                 <span>Results per page:</span>
@@ -992,9 +1054,9 @@
                 <!-- Dynamic apartment cards go here -->
             </div>
             
-            <div class="view-all">
+            <!-- <div class="view-all">
                 <a href="#" class="btn btn-secondary">VIEW ALL FLOOR PLANS ></a>
-            </div>
+            </div> -->
         </div>
     </section>
     
@@ -1003,12 +1065,12 @@
         <div class="container">
             <div class="section-header">
                 <h2>Health, Wellness, and Professional Life</h2>
-                <p>Pulse At ParkView integrates professional, medical, and lifestyle services, making work-life balance achievable right outside your door.</p>
+                <p>Pulse at Parkview integrates professional, medical, and lifestyle services, making work-life balance achievable right outside your door.</p>
             </div>
 
             <!-- Wellness Tabs -->
             <div class="tabs" id="wellness-tabs">
-                <a href="#" class="active" data-wellness-filter="work">Work & Office</a>
+                <a href="#" class="active" data-wellness-filter="work">Work & Offices</a>
                 <a href="#" data-wellness-filter="medical">Medical Office</a>
                 <a href="#" data-wellness-filter="shop">Wellness Retail</a>
                 <a href="#" data-wellness-filter="aau">Sports & AAU</a>
@@ -1027,40 +1089,40 @@
         <div class="container">
             <div class="section-header">
                 <h2>Happenings</h2>
-                <p>Make your next memory. Here, we've got plenty of exciting events, festivals, live music, and family-friendly fun happening at Pulse At ParkView.</p>
+                <p>Make your next memory. Here, we've got plenty of exciting events, festivals, live music, and family-friendly fun happening at Pulse at Parkview.</p>
             </div>
             <div class="grid-layout happenings-items">
                 <!-- Event 1 -->
                 <div class="happenings-item">
                     <img src="images/event-1.png" alt="Makers Market">
                     <div class="happenings-item-content">
-                        <h3>Makers Market (BOGO) at Dublin Market</h3>
-                        <p>Sat, Oct 25 | 9:00 AM - 12:00 PM</p>
-                        <a href="#">Read more ></a>
+                        <h3>Makers Market (BOGO) at Pulse Marketplace</h3>
+                        <p>Sat, Dec 25 | 9:00 AM - 12:00 PM</p>
+                        <a href="#">Coming Soon ></a>
                     </div>
                 </div>
                 <!-- Event 2 -->
                 <div class="happenings-item">
                     <img src="images/event-2.png" alt="Wine Wednesdays at Vaso">
                     <div class="happenings-item-content">
-                        <h3>Wine Wednesdays at Vaso</h3>
-                        <p>Wed, Oct 29 | 4:00 PM - 6:00 PM</p>
-                        <a href="#">Read more ></a>
+                        <h3>Wine Wednesdays at Sazon</h3>
+                        <p>Wed, Nov 29 | 4:00 PM - 6:00 PM</p>
+                        <a href="#">Coming Soon ></a>
                     </div>
                 </div>
                 <!-- Event 3 -->
                 <div class="happenings-item">
                     <img src="images/event-3.png" alt="Happy Hour at The Avenue Dublin">
                     <div class="happenings-item-content">
-                        <h3>Happy Hour at The Avenue Dublin</h3>
+                        <h3>Happy Hour Avenue at Parkview</h3>
                         <p>Mon-Fri | 3:00 PM - 6:00 PM</p>
-                        <a href="#">Read more ></a>
+                        <a href="#">Coming Soon ></a>
                     </div>
                 </div>
             </div>
-            <div class="view-all">
+            <!-- <div class="view-all">
                 <a href="#">VIEW ALL EVENTS ></a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -1069,15 +1131,19 @@
     <section class="section about-section" id="about">
         <div class="container">
              <div class="section-header">
-                <h2>Our Story: About Pulse At ParkView</h2>
+                <h2>Our Story: About Pulse at Parkview</h2>
             </div>
             <div class="about-content">
                 <div class="about-image">
-                     <img src="images/1763319450.png" alt="Pulse At ParkView Riverfront">
+                     <img src="images/1763319450.png" alt="Pulse at Parkview Riverfront">
                 </div>
                 <div class="about-text">
-                    <p>Pulse At ParkView is the culmination of a decade-long vision to create a vibrant, walkable, mixed-use community right on the banks of the Scioto River in Dublin, Ohio. It was designed as a place where life, work, and leisure intersect seamlessly.</p>
-                    <p>Our foundation rests on connection—connecting people to nature, to business, and to each other. From state-of-the-art office spaces and luxury residences to a dynamic lineup of dining, entertainment, and wellness providers, Pulse At ParkView is redefining urban living. We are more than a development; we are a destination built for community.</p>
+                    <p>Pulse at Parkview is the culmination of a decade-long vision to create a vibrant, walkable, 
+                        mixed-use community right near the Olentangy river in Columbus, Ohio. It was designed as a place where life, work, and leisure intersect seamlessly.</p>
+                    <p>Our foundation rests on connection—connecting people to nature, to business, and to each other. 
+                        From state-of-the-art office spaces and luxury residences to a dynamic lineup of dining, 
+                        entertainment, and wellness providers, Pulse at Parkview is redefining urban living. 
+                        We are more than a development; we are a destination built for community.</p>
                     <a href="#" class="btn btn-primary">READ OUR FULL HISTORY</a>
                 </div>
             </div>
@@ -1110,7 +1176,7 @@
                 <div class="news-item">
                     <img src="https://placehold.co/400x220/ddd/777?text=News+Image+3" alt="News Title">
                     <div class="news-item-content">
-                        <h3>The Dublin Market at Pulse At ParkView</h3>
+                        <h3>The Dublin Market at Pulse at Parkview</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ligula ac velit porta ultrices.</p>
                         <a href="#">read more ></a>
                     </div>
@@ -1161,18 +1227,18 @@
         <div class="container">
             <div class="section-header">
                 <h2>Let's Get Social!</h2>
-                <p>Stay connected with @pulseatparkviewdublin and tag us using #pulseatparkview!</p>
+                <p>Stay connected with @pulseatparkviewcolumbus and tag us using #pulseatparkview!</p>
             </div>
             <div class="social-grid">
                 <!-- Social Posts -->
                 <div class="social-post">
-                    <img src="https://placehold.co/350x350/bbb/777?text=Social+Post+1" alt="Social Post">
+                    <img src="images/IMG_3083.jpeg" alt="Social Post">
                 </div>
                 <div class="social-post">
-                    <img src="https://placehold.co/350x350/bbb/777?text=Social+Post+2" alt="Social Post">
+                    <img src="images/IMG_3086.jpeg" alt="Social Post">
                 </div>
                 <div class="social-post">
-                    <img src="https://placehold.co/350x350/bbb/777?text=Social+Post+3" alt="Social Post">
+                    <img src="images/IMG_3085.jpeg" alt="Social Post">
                 </div>
                 <!-- <div class="social-post">
                     <img src="https://placehold.co/350x350/bbb/777?text=Social+Post+4" alt="Social Post">
@@ -1199,9 +1265,9 @@
             <div class="map-placeholder">
                 <img src="images/1763319584.png" alt="Map of Neighborhood">
             </div>
-            <div class="view-all">
+            <!-- <div class="view-all">
                 <a href="#">DIRECTIONS ></a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -1210,7 +1276,7 @@
         <div class="container footer-content">
             <div class="footer-col logo-col">
                 <!-- Logo image integrated using a Pexels URL matching the brand aesthetic -->
-                <img src="assets/logo.jpg" alt="Pulse At ParkView Logo">
+                <img src="assets/logo.jpg" alt="Pulse at Parkview Logo">
             </div>
             <div class="footer-col">
                 <h4>Explore</h4>
@@ -1219,23 +1285,23 @@
                     <li><a href="#events">Events</a></li>
                     <li><a href="#">News</a></li>
                     <li><a href="#live">Live</a></li>
-                    <li><a href="#explore">Stay (Hotels)</a></li>
+                    <li><a href="#explore">Directory</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>About</h4>
                 <ul>
                     <li><a href="#about">Our Story</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <!-- <li><a href="#">Careers</a></li> -->
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Media</a></li>
-                    <li><a href="#">Partners</a></li>
+                    <!-- <li><a href="#">Media</a></li> -->
+                    <!-- <li><a href="#">Partners</a></li> -->
                 </ul>
             </div>
             <div class="footer-col contact-info">
                 <h4>Contact Us</h4>
                 <p>6655 Longshore Street, Suite 100</p>
-                <p>Dublin, OH 43017</p>
+                <p>Columbus, OH 43017</p>
                 <p>(614) 210-6924</p>
                 <p><a href="mailto:info@pulseatparkview.com">info@pulseatparkview.com</a></p>
                 <div class="social-links">
@@ -1254,7 +1320,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025 Pulse At ParkView. All Rights Reserved.</p>
+                <p>&copy; 2025 Pulse at Parkview. All Rights Reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
                 </div>
@@ -1268,18 +1334,18 @@
 
         const directoryItems = [
             // Dine
-            { name: "Vaso", category: "dine", description: "Rooftop Spanish Tapas Bar", image: "images/1763319709.png", link: "#" },
-            { name: "The Avenue Dublin", category: "dine", description: "Premium Steakhouse", image: "images/1763319694.png", link: "#" },
-            { name: "Riverside Coffee Co.", category: "dine", description: "Local Artisan Coffee Shop", image: "images/1763319669.png", link: "#" },
+            { name: "Sazon", category: "dine", description: "Rooftop Spanish Tapas Bar", image: "images/1763319709.png", link: "#" },
+            { name: "Avenue At Parkview", category: "dine", description: "Premium Steakhouse", image: "images/1763319694.png", link: "#" },
+            { name: "Pulse Coffee Co.", category: "dine", description: "Local Artisan Coffee Shop", image: "images/1763319669.png", link: "#" },
             
             // Shop
-            { name: "Boutique Clothing", category: "shop", description: "Fashion Retail", image: "images/1763319605.png", link: "#" },
+            { name: "Pulse Wear Co", category: "shop", description: "Fashion Retail", image: "images/1763319605.png", link: "#" },
             { name: "The Corner Grocer", category: "shop", description: "Locally-sourced foods", image: "images/1763319715.png", link: "#" },
             { name: "Zen & Flow Boutique", category: "shop", description: "Yoga and Meditation Supplies", image: "images/Zen-Flow-Boutique.png", link: "#" },
             
             // Work (Office/Business)
             { name: "Global Tech HQ", category: "work", description: "Class A Office Space", image: "images/office-spaces.png", link: "#" },
-            { name: "Pulse At ParkView Coworking", category: "work", description: "Flexible Shared Office Solutions", image: "images/Coworking.png", link: "#" },
+            { name: "Pulse at Parkview Coworking", category: "work", description: "Flexible Shared Office Solutions", image: "images/Coworking.png", link: "#" },
             
             // Stay (Hotels)
             { name: "AC Hotel Columbus Dublin", category: "stay", description: "Boutique Hotel", image: "images/Boutique-Hotel.png", link: "#" },
@@ -1287,14 +1353,14 @@
             { name: "Exchange Inn", category: "stay", description: "Modern Short-Term Stays", image: "images/exchange.png", link: "#" },
             
             // Play & Event Venues
-            { name: "PINS Mechanical Co.", category: "play", description: "Bocce, Bowling, and Games", image: "images/bowling3.png", link: "#" },
-            { name: "The Metropolitan Hall", category: "play", description: "Weddings, Conferences, and Expos", image: "images/modern-hall.png", link: "#" },
-            { name: "Gallery 77", category: "play", description: "Private Receptions and Exhibits", image: "images/Private-Receptions.png", link: "#" },
+            { name: "River Bowl", category: "play", description: "Bocce, Bowling, and Games", image: "images/bowling3.png", link: "#" },
+            { name: "Gallery 51", category: "play", description: "Private Receptions and Exhibits", image: "images/Private-Receptions.png", link: "#" },
+            { name: "Organic Child Daycare", category: "play", description: "Child Daycare", image: "images/IMG_3087.jpeg", link: "#" },
 
             // Medical Office
-            { name: "Pulse At ParkView Primary Care", category: "medical", description: "Family Medicine and Checkups", image: "images/Primary-Care.png", link: "#" },
+            { name: "Pulse at Parkview Primary Care", category: "medical", description: "Family Medicine and Checkups", image: "images/Primary-Care.png", link: "#" },
             { name: "Apex Physical Therapy", category: "medical", description: "Rehabilitation and Sports Medicine", image: "images/Physical-Therapy.png", link: "#" },
-            { name: "Pulse At ParkView Dental", category: "medical", description: "Cosmetic and General Dentistry", image: "images/Dental-practice.png", link: "#" },
+            { name: "Pulse at Parkview Dental", category: "medical", description: "Cosmetic and General Dentistry", image: "images/Dental-practice.png", link: "#" },
             
             // AAU/Sports
             { name: "AAU Indoor Hoops Arena", category: "aau", description: "Basketball and Volleyball Facility", image: "images/1763319652.png", link: "#" },
@@ -1302,27 +1368,27 @@
             { name: "Strength & Conditioning Center", category: "aau", description: "Professional Weight Training", image: "images/1763319630.png", link: "#" },
             
             // Adding more items for pagination demonstration (2 pages of 9 for "all")
-            { name: "New Restaurant X", category: "dine", description: "Gourmet Italian", image: "images/1763319853.png", link: "#" },
-            { name: "Taco Truck Stop", category: "dine", description: "Authentic Mexican", image: "images/Taco-Truck-Stop.png", link: "#" },
+            { name: "Trattoria", category: "dine", description: "Gourmet Italian", image: "images/1763319853.png", link: "#" },
+            { name: "Farm to Truck", category: "dine", description: "Authentic Mexican", image: "images/Taco-Truck-Stop.png", link: "#" },
             { name: "Bookstore & Cafe", category: "shop", description: "Books and Literature", image: "images/bookstore.png", link: "#" },
             { name: "Fitness Gear Store", category: "shop", description: "Athletic apparel", image: "images/fitness-store.png", link: "#" },
-            { name: "IT Consulting Firm", category: "work", description: "Business solutions", image: "images/IT-firm.png", link: "#" },
+            { name: "Green Sports Rehab Center", category: "work", description: "Green Sports Rehab Center", image: "images/IMG_3108.jpeg", link: "#" },
             { name: "Massage Therapy", category: "medical", description: "Pain relief services", image: "images/Massage-Therapy.png", link: "#" },
         ];
 
         const apartments = [
-            { unit: "Apt 201", beds: 1, bath: 1, sqft: 750, price: 1850, image: "images/1763319619.png", color: "b3c6e4" },
-            { unit: "Apt 305", beds: 2, bath: 2, sqft: 1050, price: 2500, image: "images/1763319561.png", color: "a2d2ff" },
-            { unit: "Apt 110", beds: 1, bath: 1, sqft: 680, price: 1700, image: "images/1763319863.png", color: "c3e4f7" },
-            { unit: "Penthouse P1", beds: 3, bath: 3, sqft: 1600, price: 4200, image: "images/1763319818.png", color: "8fa8d1" },
-            { unit: "Apt 402", beds: 2, bath: 1.5, sqft: 980, price: 2350, image: "images/1763319310.png", color: "a2d2ff" },
-            { unit: "Apt 220", beds: 1, bath: 1, sqft: 780, price: 1900, image: "images/1763319511.png", color: "b3c6e4" },
+            { unit: "Apt 201", beds: 1, bath: 1, sqft: 650, price: 305000, image: "images/IMG_3107.jpeg", color: "b3c6e4" },
+            { unit: "Apt 305", beds: 2, bath: 2, sqft: 1050, price: 470000, image: "images/IMG_3090.jpeg", color: "a2d2ff" },
+            { unit: "Apt 110", beds: 1, bath: 1, sqft: 680, price: 305000, image: "images/IMG_3094.jpeg", color: "c3e4f7" },
+            { unit: "Penthouse P1", beds: 3, bath: 2, sqft: 1400, price: 3388, image: "images/apartment1.png", color: "8fa8d1" },
+            { unit: "Apt 402", beds: 2, bath: 1.5, sqft: 1200, price: 2892, image: "images/IMG_3091.jpeg", color: "a2d2ff" },
+            { unit: "Apt 220", beds: 1, bath: 1, sqft: 650, price: 1586, image: "images/IMG_3093.jpeg", color: "b3c6e4" },
         ];
 
         const wellnessData = {
             work: {
                 title: "Flexible Workspaces & Professional Offices",
-                description: "Pulse At ParkView hosts state-of-the-art office spaces designed for productivity, collaboration, and growth. From corporate headquarters to flexible co-working solutions, our professional environment is built to support businesses of all sizes, offering modern amenities and convenient access to dining and retail.",
+                description: "Pulse at Parkview hosts state-of-the-art office spaces designed for productivity, collaboration, and growth. From corporate headquarters to flexible co-working solutions, our professional environment is built to support businesses of all sizes, offering modern amenities and convenient access to dining and retail.",
                 image: "images/modern-office-spaces.png",
             },
             medical: {
@@ -1337,7 +1403,7 @@
             },
             aau: {
                 title: "Elite Sports & AAU Training Facilities",
-                description: "Dedicated to sports and physical achievement, Pulse At ParkView includes high-quality AAU and general sports facilities. These spaces offer state-of-the-art equipment and specialized courts for basketball, volleyball, gymnastics, and strength training, supporting athletic development for all ages.",
+                description: "Dedicated to sports and physical achievement, Pulse at Parkview includes high-quality AAU and general sports facilities. These spaces offer state-of-the-art equipment and specialized courts for basketball, volleyball, gymnastics, and strength training, supporting athletic development for all ages.",
                 image: "images/1763319652.png",
             }
         };
@@ -1381,7 +1447,7 @@
                     <div class="explore-item-content">
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
-                        <a href="${item.link}">Details ></a>
+                        <a href="${item.link}">Coming Soon ></a>
                     </div>
                 </div>
                 `;
@@ -1435,8 +1501,13 @@
                             <div class="apartment-stat"><strong>${apt.bath}</strong><span>Baths</span></div>
                             <div class="apartment-stat"><strong>${apt.sqft}</strong><span>Sq Ft</span></div>
                         </div>
-                        <p class="apartment-price">$${apt.price.toLocaleString()}<small>/mo</small></p>
-                        <a href="#" class="btn btn-primary" style="width: 100%;">INQUIRE</a>
+                        <p class="apartment-price">
+                        $${apt.price.toLocaleString()}
+                        ${apt.unit === 'Penthouse P1' || apt.unit === 'Apt 402' || apt.unit === 'Apt 220' 
+                            ? '<small>/mo</small>' 
+                            : ''}
+                        </p>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Coming Soon</a>
                     </div>
                 </div>
                 `;
@@ -1460,7 +1531,6 @@
                 <div class="wellness-text">
                     <h3>${data.title}</h3>
                     <p>${data.description}</p>
-                    <a href="#explore" class="btn btn-primary" style="margin-top: 15px;">EXPLORE ${category.toUpperCase()} OPTIONS</a>
                 </div>
             `;
             contentArea.innerHTML = contentHtml;
